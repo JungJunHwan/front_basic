@@ -30,6 +30,14 @@
             color: yellow;
         }
     </style>
+    <script>
+        function updateDemo1(){
+            document.getElementById("demo1").innerHTML="hello world 1";
+        }
+        document.getElementById("load1").innerHTML="hello world load 1";
+    </script>
+    <!-- 외부 jh import시에 아래와 같이 선언 -->
+    <script src="js/myjs.js"></script>
 </head>
 <body>
     <!-- css 적용방법 3가지 : 인라인, 내부 스타일, 외부 스타일 -->
@@ -58,6 +66,27 @@
         <p>첫번째 단락</p>
         <section><p>첫번째 단락</p></section>
     </div>
+
+    <h2>javascript 예시</h2>
+    <p id="demo1">변경될 내용 1</p>
+    <button onclick="updateDemo1()">변경 버튼 1</button>
+    <p id="demo2">변경될 내용 2</p>
+    <button onclick="updateDemo2()">변경 버튼 2</button>
+    <p id="demo3">변경될 내용 3</p>
+    <button onclick="updateDemo3()">변경 버튼 3</button>
+
+    <h2>js 노드 순서</h2>
+    <p id="load1">js 로드 1</p>
+    <p id="load2">js 로드 2</p>
+
+
+
+    <script>
+        document.getElementById("load2").innerHTML="hello world load 2";
+        function updateDemo2(){
+            document.getElementById("demo2").innerHTML="hello world 2";
+        }
+    </script>
 
 </body>
 </html>
